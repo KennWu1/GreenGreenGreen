@@ -1,4 +1,4 @@
-import { BarChart3, MessageCircle, Landmark, Info } from "lucide-react";
+import { BarChart3, MessageCircle, Landmark, Info, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Tab } from "@/components/TabNavigation";
 
@@ -8,6 +8,13 @@ interface CategoryInfoProps {
 
 export function CategoryInfo({ activeTab }: CategoryInfoProps) {
   const info = {
+    overall: {
+      icon: Layers,
+      title: "Overall Best Picks",
+      description:
+        "Combined analysis across all categories—technical, sentiment, and political factors—to identify the absolute best stock opportunities right now.",
+      color: "primary",
+    },
     technical: {
       icon: BarChart3,
       title: "Technical & Fundamental Analysis",
@@ -40,6 +47,7 @@ export function CategoryInfo({ activeTab }: CategoryInfoProps) {
         <div
           className={cn(
             "w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0",
+            activeTab === "overall" && "bg-primary/10 text-primary",
             activeTab === "technical" && "bg-primary/10 text-primary",
             activeTab === "sentiment" && "bg-accent/10 text-accent",
             activeTab === "politics" && "bg-warning/10 text-warning"

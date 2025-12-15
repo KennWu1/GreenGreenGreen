@@ -510,6 +510,167 @@ export const politicsStocks: Stock[] = [
   }
 ];
 
+// Overall best picks combining analysis from all categories
+export const overallStocks: Stock[] = [
+  {
+    symbol: "NVDA",
+    name: "NVIDIA Corporation",
+    price: 142.85,
+    change: 4.23,
+    changePercent: 3.05,
+    score: 99,
+    reasoning: "NVIDIA ranks #1 overall due to exceptional confluence across all factors. Technical analysis shows RSI momentum with MA breakout and strong volume. Sentiment analysis reveals AI dominance narrative at peak enthusiasm. Political tailwinds from CHIPS Act funding and defense AI contracts. The rare combination of technical strength, retail passion, and policy support makes this the top pick.",
+    signals: ["Technical Breakout", "AI Leader", "Policy Beneficiary", "Triple Confluence"],
+    sources: [
+      { title: "Goldman Sachs Price Target", url: "https://www.goldmansachs.com/insights/nvda" },
+      { title: "CHIPS Act Analysis", url: "https://www.commerce.gov/chips" },
+      { title: "AI Sentiment Report", url: "https://www.wsj.com/ai-stocks" }
+    ],
+    metrics: { pe: 65.2, marketCap: "3.5T", volume: "45.2M", rsi: 62 }
+  },
+  {
+    symbol: "PLTR",
+    name: "Palantir Technologies",
+    price: 78.45,
+    change: 4.23,
+    changePercent: 5.70,
+    score: 96,
+    reasoning: "Palantir shows exceptional strength across sentiment and political factors with solid technicals. AIP platform adoption drives social buzz while defense contracts align with spending priorities. S&P 500 inclusion provides institutional validation. The defense-AI narrative creates a unique cross-category moat that few competitors can match.",
+    signals: ["Defense AI Leader", "S&P 500 Entry", "Contract Pipeline", "Sentiment Peak"],
+    sources: [
+      { title: "Palantir Contract Wins", url: "https://www.palantir.com/newsroom" },
+      { title: "Defense Spending Bill", url: "https://www.defense.gov/budget" },
+      { title: "Reddit Sentiment Analysis", url: "https://reddit.com/r/wallstreetbets/pltr" }
+    ]
+  },
+  {
+    symbol: "RTX",
+    name: "RTX Corporation",
+    price: 124.85,
+    change: 2.95,
+    changePercent: 2.42,
+    score: 94,
+    reasoning: "RTX combines strong technical fundamentals with massive political tailwinds from defense spending increases. NATO expansion and Middle East tensions create sustained demand. The stock shows accumulation patterns while benefiting from bipartisan defense support. Sentiment analysis shows 'defense play' trending among institutional investors.",
+    signals: ["Defense Demand", "NATO Expansion", "Technical Strength", "Bipartisan Support"],
+    sources: [
+      { title: "RTX Investor Relations", url: "https://www.rtx.com/investors" },
+      { title: "NATO Defense Spending", url: "https://www.nato.int/defense-spending" },
+      { title: "Defense Sector Analysis", url: "https://www.defensenews.com" }
+    ],
+    metrics: { pe: 22.5, marketCap: "180B", volume: "8.5M", rsi: 58 }
+  },
+  {
+    symbol: "TSLA",
+    name: "Tesla Inc",
+    price: 425.80,
+    change: 18.45,
+    changePercent: 4.53,
+    score: 92,
+    reasoning: "Tesla scores high across sentiment and politics with improving technicals. Political connections provide regulatory clarity while FSD momentum drives retail enthusiasm. Technical consolidation suggests breakout potential. Energy storage business adds diversification beyond auto narrative. Cross-category strength makes this a top overall pick.",
+    signals: ["Political Alignment", "FSD Momentum", "Energy Storage", "Retail Favorite"],
+    sources: [
+      { title: "Tesla Investor Relations", url: "https://ir.tesla.com" },
+      { title: "Autonomous Regulations", url: "https://www.nhtsa.gov/autonomous-vehicles" },
+      { title: "Energy Storage Report", url: "https://www.eia.gov/storage" }
+    ]
+  },
+  {
+    symbol: "LMT",
+    name: "Lockheed Martin",
+    price: 542.30,
+    change: 12.80,
+    changePercent: 2.42,
+    score: 90,
+    reasoning: "Lockheed combines defensive technical characteristics with maximum political exposure. F-35 program provides decades of revenue visibility. Hypersonics and space divisions offer growth optionality. Bipartisan defense support ensures stable demand regardless of election outcomes. Technical analysis shows consistent uptrend with low volatility.",
+    signals: ["F-35 Visibility", "Hypersonics Leader", "Political Shield", "Stable Uptrend"],
+    sources: [
+      { title: "Lockheed Martin News", url: "https://www.lockheedmartin.com/news" },
+      { title: "F-35 Program Update", url: "https://www.f35.com" },
+      { title: "Defense Budget Analysis", url: "https://www.csis.org/defense" }
+    ],
+    metrics: { pe: 18.9, marketCap: "130B", volume: "1.2M", rsi: 55 }
+  },
+  {
+    symbol: "COIN",
+    name: "Coinbase Global",
+    price: 312.50,
+    change: 22.30,
+    changePercent: 7.68,
+    score: 88,
+    reasoning: "Coinbase benefits from crypto regulatory optimism across political and sentiment factors. SEC leadership changes anticipated to be favorable. Bitcoin ETF success validates custody business. Social sentiment shows 'crypto spring' narrative gaining momentum. Technical bounce from support creates attractive entry point.",
+    signals: ["Regulatory Shift", "ETF Catalyst", "Sentiment Recovery", "Support Bounce"],
+    sources: [
+      { title: "SEC Crypto Policy", url: "https://www.sec.gov/crypto" },
+      { title: "Bitcoin ETF Flows", url: "https://www.theblock.co/bitcoin-etf" },
+      { title: "Coinbase Earnings", url: "https://investor.coinbase.com" }
+    ]
+  },
+  {
+    symbol: "MSFT",
+    name: "Microsoft Corporation",
+    price: 428.50,
+    change: 2.85,
+    changePercent: 0.67,
+    score: 86,
+    reasoning: "Microsoft provides balanced exposure across all categories with minimal downside. Technical golden cross with Azure growth acceleration. Copilot AI integration drives sentiment momentum. Government cloud contracts provide political stability. The ultimate defensive AI play with exposure to enterprise, cloud, and gaming.",
+    signals: ["Golden Cross", "Azure Growth", "AI Copilot", "Government Cloud"],
+    sources: [
+      { title: "Morgan Stanley Research", url: "https://www.morganstanley.com/ideas/msft-outlook" },
+      { title: "Azure Revenue Report", url: "https://www.microsoft.com/investor/reports" },
+      { title: "Government Cloud", url: "https://azure.microsoft.com/government" }
+    ],
+    metrics: { pe: 36.8, marketCap: "3.2T", volume: "18.7M", rsi: 58 }
+  },
+  {
+    symbol: "XOM",
+    name: "Exxon Mobil",
+    price: 118.45,
+    change: 3.20,
+    changePercent: 2.78,
+    score: 84,
+    reasoning: "Exxon combines defensive value with political tailwinds from energy policy shifts. Pioneer acquisition adds Permian scale. Dividend aristocrat status appeals to income investors. AI analysis shows energy independence narrative benefiting integrated majors. Technical support at 200-day MA provides entry point with defined risk.",
+    signals: ["Pioneer Synergies", "Energy Policy", "Dividend Strength", "Value Play"],
+    sources: [
+      { title: "Exxon Pioneer Deal", url: "https://corporate.exxonmobil.com/pioneer" },
+      { title: "Energy Policy Update", url: "https://www.energy.gov" },
+      { title: "Dividend Analysis", url: "https://www.dividendchannel.com/xom" }
+    ],
+    metrics: { pe: 13.8, marketCap: "475B", volume: "14.2M", rsi: 52 }
+  },
+  {
+    symbol: "META",
+    name: "Meta Platforms Inc",
+    price: 612.30,
+    change: 8.45,
+    changePercent: 1.40,
+    score: 82,
+    reasoning: "Meta shows technical cup-and-handle pattern with improving sentiment metrics. AI monetization through ads drives fundamental strength. Reality Labs narrative improving with Quest success. Political risk from antitrust appears manageable in current environment. Cross-category strength in technicals and sentiment outweighs moderate political uncertainty.",
+    signals: ["Cup & Handle", "AI Ads Growth", "VR Momentum", "Margin Expansion"],
+    sources: [
+      { title: "JPMorgan META Analysis", url: "https://www.jpmorgan.com/insights/meta" },
+      { title: "Meta Earnings", url: "https://investor.fb.com/earnings" },
+      { title: "VR Market Report", url: "https://www.statista.com/vr-market" }
+    ],
+    metrics: { pe: 28.4, marketCap: "1.6T", volume: "12.3M", rsi: 55 }
+  },
+  {
+    symbol: "GEO",
+    name: "The GEO Group",
+    price: 32.80,
+    change: 4.65,
+    changePercent: 16.52,
+    score: 80,
+    reasoning: "GEO provides maximum political exposure with improving sentiment and technical breakout. Immigration policy shifts create demand catalyst. ICE contract renewals provide revenue visibility. Technical analysis shows breakout from multi-year base. Sentiment recovery as ESG concerns take backseat to earnings growth narrative.",
+    signals: ["Policy Catalyst", "Contract Visibility", "Technical Breakout", "Sentiment Shift"],
+    sources: [
+      { title: "GEO Group News", url: "https://www.geogroup.com/news" },
+      { title: "ICE Detention Data", url: "https://www.ice.gov/detention" },
+      { title: "Immigration Policy Update", url: "https://www.dhs.gov/immigration" }
+    ],
+    metrics: { pe: 15.2, marketCap: "4.0B", volume: "8.5M", rsi: 72 }
+  }
+];
+
 export interface BacktestDay {
   date: string;
   stocks: {
