@@ -27,6 +27,9 @@
     --accent: 45 93% 58%;
     --accent-foreground: 222 47% 6%;
 
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 6%;
+
     --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
