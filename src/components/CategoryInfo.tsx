@@ -1,10 +1,9 @@
-import { BarChart3, MessageCircle, Info } from "lucide-react";
+import { BarChart3, MessageCircle, Landmark, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-type Tab = "technical" | "sentiment";
+import { Tab } from "@/components/TabNavigation";
 
 interface CategoryInfoProps {
-  activeTab: Tab;
+  activeTab: Exclude<Tab, "backtesting">;
 }
 
 export function CategoryInfo({ activeTab }: CategoryInfoProps) {
@@ -14,12 +13,21 @@ export function CategoryInfo({ activeTab }: CategoryInfoProps) {
       title: "Technical & Fundamental Analysis",
       description:
         "Rankings based on chart patterns, RSI, moving averages, P/E ratios, earnings reports, and institutional sentiment from major investment firms.",
+      color: "primary",
     },
     sentiment: {
       icon: MessageCircle,
       title: "AI Sentiment Analysis",
       description:
-        "AI-powered analysis of political landscape, social media buzz, retail investor sentiment, and market narrative momentum.",
+        "AI-powered analysis of social media buzz, retail investor sentiment, market narrative momentum, and trending investment themes.",
+      color: "accent",
+    },
+    politics: {
+      icon: Landmark,
+      title: "Political & Geopolitical Analysis",
+      description:
+        "AI complex analysis of current politics, live news, policy changes, defense spending, regulatory shifts, and short-term panic opportunities where AI predicts recovery.",
+      color: "warning",
     },
   };
 
@@ -32,9 +40,9 @@ export function CategoryInfo({ activeTab }: CategoryInfoProps) {
         <div
           className={cn(
             "w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0",
-            activeTab === "technical"
-              ? "bg-primary/10 text-primary"
-              : "bg-accent/10 text-accent"
+            activeTab === "technical" && "bg-primary/10 text-primary",
+            activeTab === "sentiment" && "bg-accent/10 text-accent",
+            activeTab === "politics" && "bg-warning/10 text-warning"
           )}
         >
           <Icon className="w-5 h-5" />

@@ -1,16 +1,28 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { TabNavigation } from "@/components/TabNavigation";
+import { TabNavigation, Tab } from "@/components/TabNavigation";
 import { CategoryInfo } from "@/components/CategoryInfo";
 import { StockCard } from "@/components/StockCard";
-import { technicalStocks, sentimentStocks } from "@/data/stocks";
-
-type Tab = "technical" | "sentiment";
+import { BacktestingView } from "@/components/BacktestingView";
+import { technicalStocks, sentimentStocks, politicsStocks } from "@/data/stocks";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<Tab>("technical");
 
-  const stocks = activeTab === "technical" ? technicalStocks : sentimentStocks;
+  const getStocks = () => {
+    switch (activeTab) {
+      case "technical":
+        return technicalStocks;
+      case "sentiment":
+        return sentimentStocks;
+      case "politics":
+        return politicsStocks;
+      default:
+        return [];
+    }
+  };
+
+  const stocks = getStocks();
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,18 +37,24 @@ const Index = () => {
       <main className="relative container mx-auto px-4 pb-12">
         <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
-        <CategoryInfo activeTab={activeTab} />
+        {activeTab === "backtesting" ? (
+          <BacktestingView />
+        ) : (
+          <>
+            <CategoryInfo activeTab={activeTab} />
 
-        <div className="space-y-3">
-          {stocks.map((stock, index) => (
-            <StockCard
-              key={`${activeTab}-${stock.symbol}`}
-              stock={stock}
-              rank={index + 1}
-              index={index}
-            />
-          ))}
-        </div>
+            <div className="space-y-3">
+              {stocks.map((stock, index) => (
+                <StockCard
+                  key={`${activeTab}-${stock.symbol}`}
+                  stock={stock}
+                  rank={index + 1}
+                  index={index}
+                />
+              ))}
+            </div>
+          </>
+        )}
 
         {/* Disclaimer */}
         <div className="mt-8 text-center">
