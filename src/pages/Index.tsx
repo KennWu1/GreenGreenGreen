@@ -4,13 +4,15 @@ import { TabNavigation, Tab } from "@/components/TabNavigation";
 import { CategoryInfo } from "@/components/CategoryInfo";
 import { StockCard } from "@/components/StockCard";
 import { BacktestingView } from "@/components/BacktestingView";
-import { technicalStocks, sentimentStocks, politicsStocks } from "@/data/stocks";
+import { technicalStocks, sentimentStocks, politicsStocks, overallStocks } from "@/data/stocks";
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState<Tab>("technical");
+  const [activeTab, setActiveTab] = useState<Tab>("overall");
 
   const getStocks = () => {
     switch (activeTab) {
+      case "overall":
+        return overallStocks;
       case "technical":
         return technicalStocks;
       case "sentiment":

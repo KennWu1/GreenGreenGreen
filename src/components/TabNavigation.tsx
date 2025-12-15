@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import { BarChart3, MessageCircle, Landmark, History } from "lucide-react";
+import { BarChart3, MessageCircle, Landmark, History, Layers } from "lucide-react";
 
-export type Tab = "technical" | "sentiment" | "politics" | "backtesting";
+export type Tab = "overall" | "technical" | "sentiment" | "politics" | "backtesting";
 
 interface TabNavigationProps {
   activeTab: Tab;
@@ -9,6 +9,7 @@ interface TabNavigationProps {
 }
 
 const tabs: { id: Tab; label: string; icon: typeof BarChart3 }[] = [
+  { id: "overall", label: "Overall", icon: Layers },
   { id: "technical", label: "Technical", icon: BarChart3 },
   { id: "sentiment", label: "Sentiment", icon: MessageCircle },
   { id: "politics", label: "Politics", icon: Landmark },
