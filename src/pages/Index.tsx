@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Header } from "@/components/Header";
-import { TabNavigation, Tab } from "@/components/TabNavigation";
+import { Header, Tab } from "@/components/Header";
 import { StockCard } from "@/components/StockCard";
 import { BacktestingView } from "@/components/BacktestingView";
 import { useStockData } from "@/hooks/useStockData";
@@ -72,11 +71,9 @@ const Index = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      <Header />
+      <Header activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <main className="relative container mx-auto px-4 pb-12">
-        <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
-
+      <main className="relative container mx-auto px-4 py-6 pb-12">
         {activeTab === "backtesting" ? (
           <BacktestingView />
         ) : (
