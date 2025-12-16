@@ -10,8 +10,8 @@ export function Header() {
               <TrendingUp className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">StockPulse</h1>
-              <p className="text-xs text-muted-foreground">Optimal Buy Signals</p>
+              <h1 className="text-xl font-bold text-foreground">GreenGreenGreen</h1>
+              <p className="text-xs text-muted-foreground">Stocks Made Easy</p>
             </div>
           </div>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
