@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { TabNavigation, Tab } from "@/components/TabNavigation";
-import { CategoryInfo } from "@/components/CategoryInfo";
 import { StockCard } from "@/components/StockCard";
 import { BacktestingView } from "@/components/BacktestingView";
 import { useStockData } from "@/hooks/useStockData";
@@ -82,8 +81,6 @@ const Index = () => {
           <BacktestingView />
         ) : (
           <>
-            <CategoryInfo activeTab={activeTab} />
-
             {/* Data Source Toggle & Refresh */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
